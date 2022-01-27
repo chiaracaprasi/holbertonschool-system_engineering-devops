@@ -1,2 +1,2 @@
 #!/bin/bash
-file 0 s SCHOOL School
+0 string SCHOOL School
