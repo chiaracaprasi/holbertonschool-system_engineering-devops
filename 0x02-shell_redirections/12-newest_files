@@ -1,2 +1,2 @@
-#!/bin/baah
+#!/bin/bash
 find . -type f -mtime 10 | ls -t
