@@ -1,2 +1,2 @@
 #!/bin/bash
-echo {a..z}{a..z} | tr 'oo' -delete | tr ' ' '\n'| head -n32
+echo {a..z}{a..z} | tr 'oo' -delete | tr ':' '\n'
