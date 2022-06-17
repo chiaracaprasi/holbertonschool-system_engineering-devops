@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Display content for current dir in a list format, only part after first -
+ls . | tr '\n' '\n'\ | cut -d "-" -f2
