@@ -2,5 +2,5 @@
 # Display content for current dir in a list format, only part after first -
 for file in *
 do
-    echo $file | cut -d "-" -f2
+    echo "$file" | cut -d "-" -f2
 done
