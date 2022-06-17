@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
 # Display content for current dir in a list format, only part after first -
-find . | tr '\n' '\n'\ | cut -d "-" -f2
+for file in *
+do
+    echo $file | cut -d "-" -f2
+done
