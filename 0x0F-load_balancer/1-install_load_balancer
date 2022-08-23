@@ -20,9 +20,10 @@ backend web_servers
    server 4323-web-02 34.229.134.248:80 check
 '
 
+
 sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get -y install haproxy
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.original
-sudo printf '%s' "$CONFIG_SETTINGS" >> /etc/haproxy/haproxy.cfg 
-sudo service haproxy start 
+sudo sh -c 'printf "%s" "$CONFIG_SETTINGS" >> /etc/haproxy/haproxy.cfg' 
+sudo service haproxy start
