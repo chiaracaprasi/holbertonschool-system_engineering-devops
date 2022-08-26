@@ -15,8 +15,8 @@ get_subdomains_info () {
 
     elif [ "$#" -eq 1 ]; then
         for subd in www lb-01 web-01 web-02; do
-        record_type="$(dig "$subd"."$1" | grep -A1 'ANSWER SECTION:' |  tail -1 | awk '{print $4}')"  
-        destionation_ip="$(dig "$subd"."$1" | grep -A1 'ANSWER SECTION:' |  tail -1 | awk '{print $5}')"
+        record_type="$(dig "$subd"."$domain" | grep -A1 'ANSWER SECTION:' |  tail -1 | awk '{print $4}')"  
+        destionation_ip="$(dig "$subd"."$domain" | grep -A1 'ANSWER SECTION:' |  tail -1 | awk '{print $5}')"
         echo "The subdomain $subd is a $record_type record and points to $destionation_ip"
         done
     fi
