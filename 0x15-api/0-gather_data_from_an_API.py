@@ -2,13 +2,12 @@
 """
 Module 0-gather_data_from_an_API
 """
-
 import requests
-from sys import argv
+import sys
 
 if __name__ == '__main__':
 
-    employee_ID = int(argv[1])
+    employee_ID = int(sys.argv[1])
     user_url = 'https://jsonplaceholder.typicode.com/users/{}'.format(
         employee_ID)
     employee_response = requests.get(user_url)
