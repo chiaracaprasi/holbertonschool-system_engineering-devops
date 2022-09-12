@@ -8,7 +8,7 @@ from sys import argv
 
 if __name__ == '__main__':
 
-    employee_ID = argv[1]
+    employee_ID = int(argv[1])
     user_url = 'https://jsonplaceholder.typicode.com/users/{}'.format(
         employee_ID)
     employee = requests.get(user_url)
@@ -30,4 +30,4 @@ if __name__ == '__main__':
     print('Employee {} is done with tasks({}/{}):'.format(employee_name,
           num_completed_tasks, total_tasks))
     for item in completed_tasks:
-        print("     {}".format(item))
+        print("\t {}".format(item))
