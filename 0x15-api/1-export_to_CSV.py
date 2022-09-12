@@ -18,7 +18,7 @@ if __name__ == '__main__':
         ID)
     todo = requests.get(todo_url).json()
 
-    with open('{}.cvs'.format(ID), 'w', encoding='UTF8', newline='') as f:
+    with open('{}.csv'.format(ID), 'w', encoding='UTF8', newline='') as f:
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
 
         for task in todo:
